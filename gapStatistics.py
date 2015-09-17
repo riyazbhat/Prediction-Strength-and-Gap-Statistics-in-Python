@@ -1,5 +1,10 @@
 #!/usr/bin/env python -*- coding: utf-8 -*-
 
+import random
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+
 __Author__ = "Riyaz Ahmad Bhat"
 __Version__ = "1.0"
 
@@ -46,11 +51,6 @@ def gap_statistic (data, nthCluster, referenceDatasets):
     return actual_dispersion, ref_dispersion
 
 if __name__ == "__main__":
-
-    import random
-    import numpy as np
-    import matplotlib.pyplot as plt
-    from sklearn.cluster import KMeans
 
     data=np.loadtxt('iris.mat', delimiter=',', dtype=float)
 
