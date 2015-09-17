@@ -1,5 +1,11 @@
 #!/usr/bin/python
-
+	
+import sys
+import random
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+	
 def k_fold (data,shuffled):
 	testSample = list()        
 	trainingSample = list()
@@ -48,12 +54,6 @@ def prediction_strength_of_cluster (test_set, test_labels, training_centers, k):
 	return min(prediction_strengths)	
 	
 if __name__ == "__main__":
-
-	import sys
-	import random
-	import numpy as np
-	import matplotlib.pyplot as plt
-	from sklearn.cluster import KMeans
 
 	#matrix=np.loadtxt('matrix1k.psp', delimiter=',', dtype=float)
 	try:
